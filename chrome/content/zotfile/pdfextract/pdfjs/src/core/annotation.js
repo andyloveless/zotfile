@@ -81,7 +81,7 @@ var Annotation = (function AnnotationClosure() {
     if (data.subtype=='Highlight') {
       var content = dict.get('Contents');
       data.content = stringToPDFString(content || '');
-      var title = dict.get('T');
+      var title = dict.get('Subj');
       data.title = stringToPDFString(title || '');
     }
 
@@ -467,7 +467,7 @@ var TextAnnotation = (function TextAnnotationClosure() {
     var data = this.data;
 
     var content = dict.get('Contents');
-    var title = dict.get('T');
+    var title = dict.get('Subj');
     data.annotationType = AnnotationType.TEXT;
     data.content = stringToPDFString(content || '');
     data.title = stringToPDFString(title || '');
